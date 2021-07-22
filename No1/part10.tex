@@ -11,12 +11,12 @@ CADデータの段階で簡単に併合できれば良いのですが、そう�
 \end{center}
 　\menu{ファイル>CADデータの統合} を選択すると図\ref{fig:bind.png} のダイアログが出てきます。
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.7]{No1/fig/bind.png}
-%\caption{CADデータの統合ダイアログ}
-%\label{fig:bind.png}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{No1/fig/bind.png}
+\caption{CADデータの統合ダイアログ}
+\label{fig:bind.png}
+\end{figure}
 
 　［ファイルの追加］ボタンを押してCADデータを追加してください。
 読み込めるファイル形式は、アドインでサポートされているデータ形式を含むCADデータです。
@@ -32,12 +32,12 @@ JWW形式やDXF形式を混在させることも可能です。
 配置はNext-Fit Algorithm（NF法）と呼ばれるアルゴリズムをベースに少し改良を加えています。
 詳しくは『長方形 詰め込み』等で検索してみてください。
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.5]{No1/fig/sample1.png}
-%\caption{NF法によるCADデータの配置}
-%\label{fig:sample1.png}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{No1/fig/sample1.png}
+\caption{NF法によるCADデータの配置}
+\label{fig:sample1.png}
+\end{figure}
 
 　凹型と凸型をうまく組み合わせるようなことはしません。
 データの最大矩形で配置されます。
@@ -62,7 +62,7 @@ CTRL+Z & 移動を元に戻す \\ \hline
 左ダブルクリック & 左90度回転 \\ \hline
 SHIFT+左ダブルクリック & 右90度回転 \\ \hline
 右クリック（ポップアップメニュー） & 処理対象の切り替え \\ \hline
-DEL & 削除（UNDO不可）\\ \hline
+SHIFT+DEL & 削除（UNDO不可）\\ \hline
 \end{tabular}
 \end{table}
 
@@ -75,44 +75,45 @@ DEL & 削除（UNDO不可）\\ \hline
 　［処理対象の切り替え］は、NC生成やDXF出力に対して一時的に対象外とする場合に使用します。
 加工を途中から再開したい場合などに使えると思います。
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.5]{No1/fig/sample2.png}
-%\caption{自動配置から若干の手直し}
-%\label{fig:sample2.png}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{No1/fig/sample2.png}
+\caption{自動配置から若干の手直し}
+\label{fig:sample2.png}
+\end{figure}
 
 　あとは通常の工程でNCプログラムが生成可能です。
 条件（レイヤが2つ以下）さえ整っていればワイヤ放電加工機用のデータも生成可能です。
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.5]{No1/fig/simu1.png}
-%\caption{生成されたNCプログラム}
-%\label{fig:simu1.png}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{No1/fig/simu1.png}
+\caption{生成されたNCプログラム}
+\label{fig:simu1.png}
+\end{figure}
 
 \subsection{統合生成オプション}
 　統合状態からNCプログラムの生成を行うと、図\ref{fig:option1.png} の［統合時オプション］ボタンが表示されます。
 図\ref{fig:option2.png} のオプションが設定可能なので、状況に合わせて設定してあげてください。
 
-%\begin{minipage}[t]{0.5\textwidth}
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.7]{No1/fig/option1.png}
-%\caption{NCデータ生成ダイアログ}
-%\label{fig:option1.png}
-%\end{figure}
-%\end{minipage}
-%\begin{minipage}[t]{0.5\textwidth}
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.7]{No1/fig/option2.png}
-%\caption{統合生成オプション}
-%\label{fig:option2.png}
-%\end{figure}
-%\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{No1/fig/option1.png}
+\caption{NCデータ生成ダイアログ}
+\label{fig:option1.png}
+\end{figure}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{No1/fig/option2.png}
+\caption{統合生成オプション}
+\label{fig:option2.png}
+\end{figure}
+\end{minipage}
 
+\vspace*{1zh}
 　［ファイルごとにコメントを埋め込む］オプションを有効にすると、
 NCプログラム内に（BindFile=``\,\textit{filename}\,'' start）とコメントが埋め込まれます。
 エディタ編集時に活用してください。
